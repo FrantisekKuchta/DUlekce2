@@ -13,24 +13,31 @@ public class Booking {
     private Guest guest;
     private Guest guest2;
     private List<Guest> otherGuests;
+    private boolean working;
+    private boolean recreational;
 
 
-    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, Guest guest) {
+    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, Guest guest, boolean working, boolean recreational) {
         this.arrival = arrival;
         this.departure = departure;
         this.day = day;
         this.room = room;
         this.guest = guest;
+        this.working = working;
+        this.recreational = recreational;
     }
 
-    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, Guest guest, Guest guest2) {
+    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, List<Guest> otherGuests, boolean working, boolean recreational) {
         this.arrival = arrival;
         this.departure = departure;
         this.day = day;
         this.room = room;
-        this.guest = guest;
-        this.guest = guest2;
+        this.otherGuests = otherGuests;
+        this.working = working;
+        this.recreational = recreational;
     }
+
+
 
     @Override
     public String toString() {
@@ -39,7 +46,7 @@ public class Booking {
                 " je od: " + arrival +
                 ", do: " + departure +
                 ", na " + day +
-                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname()+
+                " dní. Hoste jsou:" + getGuest().toString() +
                 '.';
     }
 
@@ -99,5 +106,21 @@ public class Booking {
 
     public void setGuest2(Guest guest2) {
         this.guest2 = guest2;
+    }
+
+    public boolean isWorking() {
+        return working;
+    }
+
+    public void setWorking(boolean working) {
+        this.working = working;
+    }
+
+    public boolean isRecreational() {
+        return recreational;
+    }
+
+    public void setRecreational(boolean recreational) {
+        this.recreational = recreational;
     }
 }

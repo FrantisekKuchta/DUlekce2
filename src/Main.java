@@ -53,15 +53,33 @@ public class Main {
 //        }
 
 
-        Booking booking = new Booking(LocalDate.of(2021,7,19),LocalDate.of(2021,7,27),8,room,guest);
-        Booking booking2 = new Booking(LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),14,room3,guest,guest2);
+        Booking booking = new Booking(LocalDate.of(2021,7,19),LocalDate.of(2021,7,27),
+                8,room,guest,false,true);
+
+        Booking booking2 = new Booking(LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),
+                14,room3,guestList,true, false);
 
 
         System.out.println(booking);
-       System.out.println(booking2);
+        System.out.println(booking2);
+
+
+//      List<Booking> bookingList = new ArrayList<>();
+//
+//      bookingList.add(booking);
+//      bookingList.add(booking2);
+//      bookingList.add(booking3);
+//      bookingList.add(booking4);
+//
+//      int i3 = 0;
+//      for (Booking bookings : bookingList) {
+//          System.out.println(i3 + ": " + bookings);
+//          i3++;
+      }
 
 
 
+   }
 
-    }
-}
+
+
