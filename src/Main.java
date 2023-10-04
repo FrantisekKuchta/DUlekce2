@@ -20,12 +20,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Guest guest = new Guest("Adéla","Malíková", LocalDate.of(1993,3,13));
-        Guest guest2 = new Guest("Jana","Dvořáčková",LocalDate.of(1995,5,5));
+        Guest guest = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
+        Guest guest2 = new Guest("Jana", "Dvořáčková", LocalDate.of(1995, 5, 5));
 
         System.out.println(guest);
         System.out.println(guest2);
-
         List<Guest> guestList = new ArrayList<>();
 
         guestList.add(guest);
@@ -33,53 +32,56 @@ public class Main {
 
 //        int i = 0;
 //        for (Guest guests : guestList) {
-//            System.out.println(i+": " +guests);
+//            System.out.println(i + ": " + guests);
 //            i++;
 //        }
 
-        Room room = new Room(1,1,1000,true,true);
-        Room room2 = new Room(2,1,1000,true,true);
-        Room room3 = new Room(3,3,2400,false,true);
 
-//        List<Room> roomList = new ArrayList<>();
-//        roomList.add(room);
-//        roomList.add(room2);
-//        roomList.add(room3);
-//
-//        int i2 = 0;
-//        for (Room rooms : roomList) {
-//            System.out.println(i2 + ": " + rooms);
-//            i2++;
-//        }
+        Room room = new Room(1, 1, 1000, true, true);
+        Room room2 = new Room(2, 1, 1000, true, true);
+        Room room3 = new Room(3, 3, 2400, false, true);
 
 
-        Booking booking = new Booking(LocalDate.of(2021,7,19),LocalDate.of(2021,7,27),
-                8,room,guest,false,true);
+        Booking booking = new Booking(LocalDate.of(2021, 7, 19), LocalDate.of(2021, 7, 27),
+                8, room, guest, false, true);
 
-        Booking booking2 = new Booking(LocalDate.of(2021,9,1),LocalDate.of(2021,9,14),
-                14,room3,guestList,true, false);
+        Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),
+                14, room3, guest, guestList, true, false);
 
 
         System.out.println(booking);
         System.out.println(booking2);
 
 
-//      List<Booking> bookingList = new ArrayList<>();
-//
-//      bookingList.add(booking);
-//      bookingList.add(booking2);
-//      bookingList.add(booking3);
-//      bookingList.add(booking4);
-//
-//      int i3 = 0;
-//      for (Booking bookings : bookingList) {
-//          System.out.println(i3 + ": " + bookings);
-//          i3++;
-      }
+        System.out.println("----------------------------------------------------------");
+        System.out.println("-------------------- Zkouška vypisu litů------------------");
 
 
+        List<Booking> bookingList = new ArrayList<>();
 
-   }
+        bookingList.add(booking);
+        bookingList.add(booking2);
+
+        int i3 = 0;
+        for (Booking bookings : bookingList) {
+            System.out.println(i3 + ": " + bookings);
+            i3++;
+        }
 
 
+        List<Room> roomList = new ArrayList<>();
+        roomList.add(room);
+        roomList.add(room2);
+        roomList.add(room3);
 
+        int i2 = 0;
+        for (Room rooms : roomList) {
+            System.out.println(i2 + ": " + rooms);
+            i2++;
+        }
+
+
+    }
+
+
+}

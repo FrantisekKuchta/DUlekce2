@@ -1,6 +1,7 @@
 package com.engeto.hotel;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Booking {
@@ -11,8 +12,7 @@ public class Booking {
     private  int day;
     private Room room;
     private Guest guest;
-    private Guest guest2;
-    private List<Guest> otherGuests;
+    private List<Guest> otherGuests =  new ArrayList<>();
     private boolean working;
     private boolean recreational;
 
@@ -27,7 +27,7 @@ public class Booking {
         this.recreational = recreational;
     }
 
-    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, List<Guest> otherGuests, boolean working, boolean recreational) {
+    public Booking(LocalDate arrival, LocalDate departure, int day, Room room,Guest guest, List<Guest> otherGuests, boolean working, boolean recreational) {
         this.arrival = arrival;
         this.departure = departure;
         this.day = day;
@@ -35,6 +35,7 @@ public class Booking {
         this.otherGuests = otherGuests;
         this.working = working;
         this.recreational = recreational;
+        this.guest = guest;
     }
 
 
@@ -46,7 +47,7 @@ public class Booking {
                 " je od: " + arrival +
                 ", do: " + departure +
                 ", na " + day +
-                " dní. Hoste jsou:" + getGuest().toString() +
+                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname() + " " + otherGuests +
                 '.';
     }
 
@@ -100,13 +101,6 @@ public class Booking {
         this.otherGuests = otherGuests;
     }
 
-    public Guest getGuest2() {
-        return guest2;
-    }
-
-    public void setGuest2(Guest guest2) {
-        this.guest2 = guest2;
-    }
 
     public boolean isWorking() {
         return working;

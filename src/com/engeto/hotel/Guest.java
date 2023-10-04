@@ -16,7 +16,7 @@ public class Guest {
 
     @Override
     public String toString() {
-        return " " + name +" " + surname +" " + birthday;
+        return " " + name +" " + surname +" (" + birthday +")";
     }
 
     //region Get and Set
