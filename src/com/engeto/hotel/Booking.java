@@ -13,6 +13,7 @@ public class Booking {
     private Room room;
     private Guest guest;
     private List<Guest> otherGuests =  new ArrayList<>();
+
     private boolean working;
     private boolean recreational;
 
@@ -27,7 +28,7 @@ public class Booking {
         this.recreational = recreational;
     }
 
-    public Booking(LocalDate arrival, LocalDate departure, int day, Room room,Guest guest, List<Guest> otherGuests, boolean working, boolean recreational) {
+    public Booking(LocalDate arrival, LocalDate departure, int day, Room room,Guest guest, List otherGuests, boolean working, boolean recreational) {
         this.arrival = arrival;
         this.departure = departure;
         this.day = day;

@@ -25,10 +25,15 @@ public class Main {
 
         System.out.println(guest);
         System.out.println(guest2);
+
         List<Guest> guestList = new ArrayList<>();
 
         guestList.add(guest);
         guestList.add(guest2);
+
+
+
+
 
 //        int i = 0;
 //        for (Guest guests : guestList) {
@@ -47,6 +52,8 @@ public class Main {
 
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),
                 14, room3, guest, guestList, true, false);
+
+
 
 
         System.out.println(booking);
