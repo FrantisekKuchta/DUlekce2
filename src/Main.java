@@ -31,7 +31,7 @@ public class Main {
         guestList.add(guest);
         guestList.add(guest2);
 
-
+        Guest host = guestList.get(1);
 
 
 
@@ -51,13 +51,13 @@ public class Main {
                 8, room, guest, false, true);
 
         Booking booking2 = new Booking(LocalDate.of(2021, 9, 1), LocalDate.of(2021, 9, 14),
-                14, room3, guest, guestList, true, false);
+                14, room3, guest, true, false);
 
 
 
 
         System.out.println(booking);
-        System.out.println(booking2);
+        System.out.println(booking2+ " "+host+".");
 
 
         System.out.println("----------------------------------------------------------");

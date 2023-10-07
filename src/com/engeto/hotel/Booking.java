@@ -48,7 +48,7 @@ public class Booking {
                 " je od: " + arrival +
                 ", do: " + departure +
                 ", na " + day +
-                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname() + " " + otherGuests +
+                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname() +
                 '.';
     }
 
