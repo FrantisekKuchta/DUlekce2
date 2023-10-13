@@ -1,6 +1,7 @@
 package com.engeto.hotel;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Guest {
 
@@ -16,10 +17,10 @@ public class Guest {
 
     @Override
     public String toString() {
-        return " " + name +" " + surname +" (" + birthday +")";
+        return " " + name +" " + surname +" (" + birthday.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) +")";
     }
 
-    //region Get and Set
+    //region Get and Se
     public String getName() {
         return name;
     }

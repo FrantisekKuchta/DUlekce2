@@ -1,6 +1,7 @@
 package com.engeto.hotel;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class Booking {
     private boolean recreational;
 
 
-    public Booking(LocalDate arrival, LocalDate departure, int day, Room room, Guest guest, boolean working, boolean recreational) {
+    public <get> Booking(LocalDate arrival, LocalDate departure, int day, Room room, Guest guest, boolean working, boolean recreational) {
         this.arrival = arrival;
         this.departure = departure;
         this.day = day;
@@ -45,10 +46,11 @@ public class Booking {
     public String toString() {
         return "Rezervace" +
                 " pokoje č." + room.getNumberRoom() +
-                " je od: " + arrival +
-                ", do: " + departure +
+                " je od: " + arrival.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) +
+                ", do: " + departure.format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) +
                 ", na " + day +
-                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname() +
+                " dní. Hoste jsou:" + guest.getName() + " " + guest.getSurname() + " "
+                + guest.getBirthday().format(DateTimeFormatter.ofPattern("dd.MM.yyyy")) + otherGuests +
                 '.';
     }
 

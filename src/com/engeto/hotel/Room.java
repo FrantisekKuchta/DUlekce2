@@ -3,7 +3,7 @@ package com.engeto.hotel;
 public class Room {
 
     private int numberRoom;
-    public int numberBed;
+    private int numberBed;
     private double priceRoom;
     private boolean balcony;
     private boolean seaViews;
